@@ -10,7 +10,7 @@
     "build-babel-client": "babel src/client --copy-files --out-dir ./dist/public",
     "start": "node ./dist/server.js",
     "clean": "rimraf dist node_modules",
-    "test": "jest ./src"
+    "test": "jest --config jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -27,12 +27,6 @@
     "url": "https://github.com/nerdmj/moon-boilerplate/issues"
   },
   "homepage": "https://github.com/nerdmj/moon-boilerplate#readme",
-  "jest": {
-    "setupTestFrameworkScriptFile": "./src/enzyme.setup.js",
-    "setupFiles": [
-      "raf/polyfill"
-    ]
-  },
   "dependencies": {
     "babel-jest": "^22.4.3",
     "enzyme-to-json": "^3.3.3",
@@ -46,6 +40,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.3.0",
