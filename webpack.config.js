@@ -9,6 +9,10 @@ const moduleObj = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+       test:/\.(s*)css$/,
+       use:['style-loader','css-loader', 'sass-loader']
       }
     ]
 };

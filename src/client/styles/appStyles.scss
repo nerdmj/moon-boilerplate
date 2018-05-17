@@ -1,0 +1,12 @@
+@import 'themeColors';
+//https://medium.com/a-beginners-guide-for-webpack-2/using-sass-9f52e447c5ae
+
+body {
+  background-color: $themeColor-Light;
+    font-size: 20px;
+  h1, h2 {
+      color: $themeColor-Dark;
+      font-size: 20px;
+
+  }
+}
