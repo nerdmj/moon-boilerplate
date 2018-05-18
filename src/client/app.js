@@ -3,6 +3,7 @@ import './styles/appStyles.scss';
 import './styles/common.scss';
 import './styles/manny.css';
 import homeIcon from '../images/setting.svg';
+import natureImg from '../images/nature.jpg';
 
 //https://gist.github.com/chrissimpkins/5bf5686bae86b8129bee#atom_autocomplete
 // ATOM Shortcuts
@@ -10,6 +11,10 @@ import homeIcon from '../images/setting.svg';
 
 var homeImg = document.getElementById('home');
 homeImg.src = homeIcon;
+
+
+var frontImg = document.getElementById('frontImg');
+frontImg.src = natureImg;
 
 export default class App extends Component {
     render() {
