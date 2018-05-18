@@ -2,9 +2,15 @@ import React, {Component} from 'react'
 import './styles/appStyles.scss';
 import './styles/common.scss';
 import './styles/manny.css';
+import homeIcon from '../images/setting.svg';
 
 //https://gist.github.com/chrissimpkins/5bf5686bae86b8129bee#atom_autocomplete
 // ATOM Shortcuts
+
+
+var homeImg = document.getElementById('home');
+homeImg.src = homeIcon;
+
 export default class App extends Component {
     render() {
         return (
