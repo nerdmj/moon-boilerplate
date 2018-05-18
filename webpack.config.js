@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 let nodeExternals = require('webpack-node-externals');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var package     = require('./package.json');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const moduleObj = {
 
@@ -69,7 +70,10 @@ const client = {
     }),
     new ExtractTextPlugin({
       filename:'app.bundle.css'
-    })
+    }),
+    new CopyWebpackPlugin([
+            {from:'src/client/images',to:'images'}
+    ]),
   ]
 }
 
