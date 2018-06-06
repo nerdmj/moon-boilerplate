@@ -19,7 +19,7 @@ export default class App extends Component {
 }
 
 const Home = () => (
-  <div> This is Home Page Awesome
+  <div> This is First Home Page Awesome
     <Link to={"/about"} >
       Go To About Us Page
     </Link>

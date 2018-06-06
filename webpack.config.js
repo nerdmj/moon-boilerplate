@@ -53,7 +53,6 @@ const client = {
     publicPath: '/'
   },
   target: 'web',
-  watch:true,
   resolve: { extensions: [".js", ".ts"] },
   module: moduleObj,
   devServer: {
