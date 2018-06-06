@@ -49,30 +49,31 @@ const client = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist/public/')
+    path: path.resolve(__dirname, './dist/public/'),
+    publicPath: '/'
   },
   target: 'web',
   watch:true,
   resolve: { extensions: [".js", ".ts"] },
   module: moduleObj,
   devServer: {
-   contentBase: path.join(__dirname, "dist/"),
-   port: 9002
+   contentBase: path.join(__dirname, "./dist/public/"),
+   port: 9002,
+   historyApiFallback: true,
   },
   plugins: [
     new HtmlWebPackPlugin({
       hash: true,
+      filename: 'index.html',
       title: 'My Awesome application',
-      myPageHeader: 'Moon Index',
       template: 'src/client/index.html',
       path: path.join(__dirname, "../dist/public/"),
-      filename: 'index.html'
     }),
     new ExtractTextPlugin({
       filename:'app.bundle.css'
     }),
     new CopyWebpackPlugin([
-            {from:'src/client/images',to:'images'}
+            {from:'src/client/assets/',to:'assets'}
     ]),
   ]
 }
